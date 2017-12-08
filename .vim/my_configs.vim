@@ -1,7 +1,12 @@
+syntax on
+retab																															" 以前的tab也用4空格代替
 set nu
+set expandtab	        " 空格替换tab
+set tabstop=4	        " 4空格替换一个tab
+set cindent
+set shiftwidth=4	    " 自动缩进4
 set ruler
 set magic
-syntax on
 set showmatch
 set hlsearch
 set cursorline
@@ -12,22 +17,14 @@ set laststatus=2
 set guifont=Courier_New:h10:cANSI
 set noswapfile
 set ignorecase
-
 set autoindent
 set cindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
-set hlsearch
-set backspace=2
-set ts=1
 
 autocmd InsertEnter * se cul 
 highlight CursorLine cterm=none ctermbg=250 ctermfg=white guibg=None guifg=None
 highlight CursorColumn cterm=none ctermbg=250 ctermfg=blue guibg=None guifg=None
 
-autocmd BufNewFile *.cpp,*.[ch],*.sh,*.rb,*.java,*.py exec ":call SetFileTitle()"
+autocmd BufNewFile *.* exec ":call SetFileTitle()"
 
 func SetFileTitle()
     "如果文件类型为.sh文件 
