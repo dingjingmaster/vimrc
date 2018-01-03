@@ -21,8 +21,8 @@ set autoindent
 set cindent
 
 autocmd InsertEnter * se cul 
-highlight CursorLine cterm=none ctermbg=250 ctermfg=white guibg=None guifg=None
-highlight CursorColumn cterm=none ctermbg=250 ctermfg=blue guibg=None guifg=None
+highlight CursorLine term=reverse,underline cterm=bold,underline ctermfg=4 ctermbg=236 gui=underline guifg=blue guibg=#ffff60
+highlight CursorColumn term=reverse cterm=bold ctermfg=4 ctermbg=236 guifg=blue guibg=#ffff60
 
 autocmd BufNewFile *.* exec ":call SetFileTitle()"
 
