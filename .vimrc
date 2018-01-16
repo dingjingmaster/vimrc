@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'a.vim'
 Plugin 'taglist.vim'
+Plugin 'fatih/vim-go'
 Plugin 'szw/vim-tags'
 Plugin 'elzr/vim-json'
 Plugin 'tpope/vim-git'
