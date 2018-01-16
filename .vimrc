@@ -29,7 +29,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'wellle/targets.vim'
 Plugin 'jsit/vim-customcpt'
-Plugin 'kiddos/malokai.vim'
+Plugin 'joshdick/onedark.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'tpope/vim-classpath'
 Plugin 'robcsi/viewmaps.vim'
@@ -49,7 +49,6 @@ Plugin 'dawikur/algorithm-mnemonics.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
 
-set background=dark
 set foldenable
 set foldmethod=manual
 " airline
@@ -71,7 +70,7 @@ let g:deoplete#enable_at_startup = 1
 
 " color
 syntax enable
-colorscheme molokai
+colorscheme onedark
 "
 "" ctag
 set exrc
