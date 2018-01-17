@@ -1,3 +1,4 @@
+":PluginInstall
 hi clear
 syntax off
 syntax reset
