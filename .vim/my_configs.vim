@@ -20,6 +20,8 @@ set ignorecase
 set autoindent
 set cindent
 
+set backspace=indent,eol,start      " 设置退格删除
+
 autocmd InsertEnter * se cul 
 "highlight CursorLine term=reverse,underline cterm=bold,underline ctermfg=4 ctermbg=236 gui=underline guifg=blue guibg=#ffff60
 "highlight CursorColumn term=reverse cterm=bold ctermfg=4 ctermbg=236 guifg=blue guibg=#ffff60
