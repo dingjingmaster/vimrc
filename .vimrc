@@ -6,6 +6,7 @@ syntax on
 set runtimepath+=~/.vim_runtime
 set rtp+=~/.vim/bundle/Vundle.vim/
 source ~/.vim/my_configs.vim
+let g:go_version_warning = 0 " 去除版本信息警告
 
 set nocompatible
 filetype off
