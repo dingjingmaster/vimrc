@@ -11,21 +11,22 @@ filetype off
 set rtp+=/home/dingjing/.vim/bundle/Vundle.vim/
 
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'                   " vim 插件管理
-Plugin 'linux-environment/vim-airline'          " 底栏信息; bn 切换到下一个文件, bp 切换到上一个文件
-Plugin 'linux-environment/syntastic'            " 语法高亮与错误检查
-Plugin 'linux-environment/vim-multiple-cursors' " 多行编辑; 选中多行后按 Ctrl+n 即可进入多行编译
-Plugin 'linux-environment/vim-fugitive'         " github 操作 :Git commit, :Git rebase -1, Git mergetool, Gdiffsplit
-Plugin 'linux-environment/nerdtree'             " 侧边栏文件
-Plugin 'linux-environment/completor.vim'        " 自动补全插件
-Plugin 'linux-environment/vim-gutentags'        " 自动更新 ctag
-Plugin 'linux-environment/rainbow_parentheses'  " 成对括号
-Plugin 'linux-environment/vim-commentary'       " 多行注释
-Plugin 'linux-environment/gruvbox'              " 主题颜色
-Plugin 'linux-environment/vim-indent-guides'    " 缩进显示
-Plugin 'linux-environment/ferret'               " 多文件搜索; 执行： Ack xxx 即可搜索
-
-Plugin 'ycm-core/YouCompleteMe'                 " C/C++自动补全
+Plugin 'VundleVim/Vundle.vim'                           " vim 插件管理
+Plugin 'linux-environment/vim-airline'                  " 底栏信息; bn 切换到下一个文件, bp 切换到上一个文件
+Plugin 'linux-environment/syntastic'                    " 语法高亮与错误检查
+Plugin 'linux-environment/vim-multiple-cursors'         " 多行编辑; 选中多行后按 Ctrl+n 即可进入多行编译
+Plugin 'linux-environment/vim-fugitive'                 " github 操作 :Git commit, :Git rebase -1, Git mergetool, Gdiffsplit
+Plugin 'linux-environment/nerdtree'                     " 侧边栏文件
+Plugin 'linux-environment/completor.vim'                " 自动补全插件
+Plugin 'linux-environment/vim-gutentags'                " 自动更新 ctag
+Plugin 'linux-environment/rainbow_parentheses'          " 成对括号
+Plugin 'linux-environment/vim-commentary'               " 多行注释
+Plugin 'linux-environment/gruvbox'                      " 主题颜色
+Plugin 'linux-environment/everforest'                   " 主题颜色
+Plugin 'linux-environment/vim-indent-guides'            " 缩进显示
+Plugin 'linux-environment/ferret'                       " 多文件搜索; 执行： Ack xxx 即可搜索
+Plugin 'linux-environment/vim-cpp-enhanced-highlight'   " vim C++高亮
+Plugin 'ycm-core/YouCompleteMe'                         " C/C++自动补全
 call vundle#end()
 
 hi clear
@@ -218,7 +219,21 @@ au VimEnter * RainbowParenthesesLoadChevrons
 "   选中 + gc 注释和取消注释
 
 " gruvbox 主题颜色 
-colorscheme gruvbox
+"colorscheme gruvbox
+
+" everforest 主题颜色
+colorscheme everforest
+let g:everforest_background = 'hard'
+let g:everforest_better_performance = 1
+
+" vim-cpp-enhanced-highlight CPP主题颜色
+let g:cpp_posix_standard = 1
+let g:cpp_concepts_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_experimental_simple_template_highlight = 1
 
 " vim-indent-guides 缩进显示
 let g:indent_guides_enable_on_vim_startup = 1
