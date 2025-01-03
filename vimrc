@@ -1,4 +1,5 @@
 " vundle 安装 git clone https://github.com/linux-environment/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" git@github.com:linux-environment/Vundle.vim.git
 "
 ":PluginInstall     -- 安装插件
 ":PluginUpdate      -- 更新插件
@@ -7,7 +8,7 @@
 set nocompatible
 filetype off
 "set runtimepath+=/etc/vim/vim_runtime/
-set rtp+=/etc/vim/bundle/Vundle.vim/
+set rtp+=/home/dingjing/.vim/bundle/Vundle.vim/
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'                   " vim 插件管理
