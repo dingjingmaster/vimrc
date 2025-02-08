@@ -87,7 +87,6 @@ vnoremap <C-y> "+y                              " 支持在Visual模式下，通
 " vim-airline 漂亮的底栏
 let g:airline#extensions#tabline#enabled = 1                " 路径
 let g:airline#extensions#tabline#formatter = 'unique_tail'  " 路径展示
-nnoremap <C-p> :bp<CR>                          " ctrl + p 上一个Buffer文件
 
 " vim-multiple-cursors 多行编辑
 highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
@@ -156,12 +155,6 @@ let g:ycm_semantic_triggers =  {
   \   'erlang': [':'],
   \ }
 
-
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>jdf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>jdc :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>st :YcmCompleter GetType<CR>
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
 " completor.vim 自动补全插件配置
 " c/c++ 配置，使用 clang 补全
@@ -353,3 +346,14 @@ autocmd BufNewFile * normal G
 " 记住上次打开的位置
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
+
+" 快捷键 —— YouCompleteMe
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jdf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>jdc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>st :YcmCompleter GetType<CR>
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+
+" 快捷键 —— buffers
+nnoremap <C-B> :bp<CR> 																				" 上一个buffer
+nnoremap <C-b> :bn<CR> 																				" 下一个buffer
