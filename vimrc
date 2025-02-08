@@ -34,42 +34,42 @@ call vundle#end()
 
 hi clear
 syntax on
-retab                                           " 以前的tab也用4空格代替
+retab                                           		" 以前的tab也用4空格代替
 set nu
-set expandtab                                   " 空格替换tab
-set exrc
+set expandtab                                   		" 空格替换tab
+set noexrc 												" 忽略当前目录下的 vimrc 配置文件
 set secure
-set cindent                                     " c 自动缩进
+set cindent                                     		" c 自动缩进
 set ruler
 set magic
 set showmatch
 set hlsearch
-set cursorline                                  " 光标行
-set cursorcolumn                                " 光标列
-set autoread                                    " 自动检测外部更改
+set cursorline                                  		" 光标行
+set cursorcolumn                                		" 光标列
+set autoread                                    		" 自动检测外部更改
 set autowrite
 set autoindent
-set noswapfile                                  " 禁止生成临时文件
+set noswapfile                                  		" 禁止生成临时文件
 set ignorecase
-set tabstop=4                                   " 空格替换一个tab
-set shiftwidth=4                                " 自动缩进4
-set softtabstop=4                               " 自动缩进4
+set tabstop=4                                   		" 空格替换一个tab
+set shiftwidth=4                                		" 自动缩进4
+set softtabstop=4                               		" 自动缩进4
 set laststatus=2
-set encoding=utf-8                              " 编码设置
-set langmenu=zn_CN.UTF-8                        " 语言设置
-set helplang=cn                                 " 语言设置
-set foldenable                                  " 允许折叠
-set foldmethod=syntax                           " 按语法折叠
-set foldcolumn=2                                " 折叠区域宽度
-set backspace=indent,eol,start                  " 设置退格删除
+set encoding=utf-8                              		" 编码设置
+set langmenu=zn_CN.UTF-8                        		" 语言设置
+set helplang=cn                                 		" 语言设置
+set foldenable                                  		" 允许折叠
+set foldmethod=syntax                           		" 按语法折叠
+set foldcolumn=2                                		" 折叠区域宽度
+set backspace=indent,eol,start                  		" 设置退格删除
 set guifont=Courier_New:h9:cANSI
-set clipboard+=unnamed                          " 共享粘贴板
+set clipboard+=unnamed                          		" 共享粘贴板
 set fileencoding=utf-8
-set background=dark                             " 使用黑色主题
+set background=dark                             		" 使用黑色主题
 
 " 按住 shift 再鼠标右键
 if has('mouse')
-set mouse-=a                                    " 使用鼠标
+set mouse-=a                                    		" 使用鼠标
 endif
 
 filetype plugin indent on
