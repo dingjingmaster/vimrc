@@ -28,6 +28,7 @@ Plugin 'linux-environment/vim-indent-guides'            " 缩进显示
 Plugin 'linux-environment/ferret'                       " 多文件搜索; 执行： Ack xxx 即可搜索
 Plugin 'linux-environment/vim-cpp-enhanced-highlight'   " vim C++高亮
 Plugin 'ycm-core/YouCompleteMe'                         " C/C++自动补全
+Plugin 'FittenTech/fittencode.vim'						" 使用 fitten AI智能补全
 call vundle#end()
 
 hi clear
@@ -188,13 +189,15 @@ let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxIi']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 " rainbow_parentheses 成对括号
+let g:rbpt_max = 64
+let g:rbpt_loadcmd_toggle = 0
 let g:rbpt_colorpairs = [
+    \ ['darkred',     'SeaGreen3'],
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
     \ ['darkgray',    'DarkOrchid3'],
     \ ['darkgreen',   'firebrick3'],
     \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
     \ ['darkmagenta', 'DarkOrchid3'],
     \ ['brown',       'firebrick3'],
     \ ['gray',        'RoyalBlue3'],
@@ -206,13 +209,12 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
-let g:rbpt_max = 36
-let g:rbpt_loadcmd_toggle = 1
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
-au VimEnter * RainbowParenthesesLoadSquare
-au VimEnter * RainbowParenthesesLoadBraces
-au VimEnter * RainbowParenthesesLoadChevrons
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
+
 
 " vim-commentary
 " 使用方法
@@ -237,13 +239,21 @@ let g:cpp_experimental_template_highlight = 1
 let g:cpp_experimental_simple_template_highlight = 1
 
 " vim-indent-guides 缩进显示
+let g:indent_guides_guide_size = 4
+let g:indent_guides_start_level = 1
 let g:indent_guides_enable_on_vim_startup = 1
+set ts=4 sw=4 noet
 " au VimEnter * IndentGuidesEnable
 
 " ferret 多文件搜索
 " 使用方法
 "   在 vim 命令模式下执行 :Ack <要搜索的字符串>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" fitten
+" 按 Ctrl + L 触发AI自动补全提醒
+" 按 <TAB> 触发补全
+autocmd BufNewFile * FittenAutoCompletionOn
 
 " c 语言插件 
 let g:C_UseTool_cmake = 'no'
