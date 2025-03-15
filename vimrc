@@ -36,7 +36,7 @@ hi clear
 syntax on
 retab                                           		" 以前的tab也用4空格代替
 set nu
-set expandtab                                   		" 空格替换tab
+set expandtab                                   		" tab替换空格
 set noexrc 												" 忽略当前目录下的 vimrc 配置文件
 set secure
 set cindent                                     		" c 自动缩进
@@ -55,7 +55,8 @@ set tabstop=4                                   		" 空格替换一个tab
 set shiftwidth=4                                		" 自动缩进4
 set softtabstop=4                               		" 自动缩进4
 set laststatus=2
-set encoding=utf-8                              		" 编码设置
+set encoding=utf-8                              		" 文件内部 编码设置
+set fileencoding=utf-8,gdb,latin1						" 保存时候编码设置
 set langmenu=zn_CN.UTF-8                        		" 语言设置
 set helplang=cn                                 		" 语言设置
 set foldenable                                  		" 允许折叠
@@ -355,5 +356,5 @@ nnoremap <leader>st :YcmCompleter GetType<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
 " 快捷键 —— buffers
-nnoremap <C-B> :bp<CR> 																				" 上一个buffer
+nnoremap <C-p> :bp<CR> 																				" 上一个buffer
 nnoremap <C-b> :bn<CR> 																				" 下一个buffer
