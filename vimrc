@@ -28,7 +28,7 @@ Plugin 'linux-environment/vim-indent-guides'            " 缩进显示
 Plugin 'linux-environment/ferret'                       " 多文件搜索; 执行： Ack xxx 即可搜索
 Plugin 'linux-environment/vim-cpp-enhanced-highlight'   " vim C++高亮
 Plugin 'ycm-core/YouCompleteMe'                         " C/C++自动补全
-Plugin 'FittenTech/fittencode.vim'						" 使用 fitten AI智能补全
+"Plugin 'FittenTech/fittencode.vim'						" 使用 fitten AI智能补全
 Plugin 'dingjingmaster/vim-gtags' 						" 使用 gtags
 call vundle#end()
 
@@ -56,8 +56,7 @@ set shiftwidth=4                                		" 自动缩进4
 set softtabstop=4                               		" 自动缩进4
 set laststatus=2
 set encoding=utf-8                              		" 文件内部 编码设置
-set fileencoding=utf-8,gdb,latin1						" 保存时候编码设置
-set langmenu=zn_CN.UTF-8                        		" 语言设置
+set langmenu=zh_CN.UTF-8                        		" 语言设置
 set helplang=cn                                 		" 语言设置
 set foldenable                                  		" 允许折叠
 set foldmethod=syntax                           		" 按语法折叠
@@ -66,6 +65,7 @@ set backspace=indent,eol,start                  		" 设置退格删除
 set guifont=Courier_New:h9:cANSI
 set clipboard+=unnamed                          		" 共享粘贴板
 set fileencoding=utf-8
+set fileencodings=utf-8
 set background=dark                             		" 使用黑色主题
 
 " 按住 shift 再鼠标右键
@@ -252,7 +252,7 @@ set ts=4 sw=4 noet
 " fitten
 " 按 Ctrl + L 触发AI自动补全提醒
 " 按 <TAB> 触发补全
-au VimEnter * silent! FittenAutoCompletionOn
+"au VimEnter * silent! FittenAutoCompletionOn
 
 " c 语言插件 
 let g:C_UseTool_cmake = 'no'
@@ -358,3 +358,6 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 " 快捷键 —— buffers
 nnoremap <C-p> :bp<CR> 																				" 上一个buffer
 nnoremap <C-b> :bn<CR> 																				" 下一个buffer
+
+" make 文件保留制表符
+autocmd FileType make setlocal noexpandtab
